@@ -4,13 +4,15 @@ import { useState } from "react";
 import dataT from './tinh_tp.json'
 import dataQ from './quan_huyen.json'
 import DanhSachCanTim from "./DanhSach/DanhSachCanTim";
-const DST=[]
-const DSQ=[]
-const selectDt=""
-const selectGia=""
-const T=""
-const Q=""
-
+import ChucNangTimKiemDT from "./ChucNangTimKiem/ChucNangTimKiemDT";
+import ChucNangTimKiemGia from "./ChucNangTimKiem/ChucNangTimKiemGia";
+import ChucNangTimKiemTQ from "./ChucNangTimKiem/ChucNangTimKiemTQ";
+const DST=[];
+const DSQ=[];
+const selectDt="";
+const selectGia="";
+const T="";
+const Q="";
 // Lay danh sach Tinh
 const laydataTinh=()=>{
     return(
