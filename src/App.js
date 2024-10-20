@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import fs from 'fs';
 const danhsachTro=[
   {
     "title": "CHO THUÊ PHÒNG MỚI 100%, 50m2, FULL NỘI THẤT CAO CẤP, SÁT CHỢ, AN NINH 24/24. 0903 62 1992",
@@ -39,47 +38,12 @@ const danhsachTro=[
     "content": "nhà trọ phố thành đạt - tp. hcm nhà trọ dạng chung cư mini 100 phònggiờ giấc hoàn toàn tự do - không chung chủ - có sẵn nội thất - có gác - mớ"
   }
 ]
-const fs = require('fs');
-// Đọc file JSON
-fs.readFile('tinh_tp.json', 'utf8', (err, data) => {
-    if (err) {
-        console.error('Lỗi khi đọc file:', err);
-        return;
-    }
 
-    try {
-        // Chuyển đổi chuỗi JSON thành mảng
-        DST = JSON.parse(data);
-
-        // Kiểm tra kết quả
-        console.log(mang);
-    } catch (parseErr) {
-        console.error('Lỗi khi phân tích JSON:', parseErr);
-    }
-});
-const fs2 = require('fs2');
-// Đọc file JSON
-fs2.readFile('quan_huyen.json', 'utf8', (err, data) => {
-    if (err) {
-        console.error('Lỗi khi đọc file:', err);
-        return;
-    }
-
-    try {
-        // Chuyển đổi chuỗi JSON thành mảng
-        DST = JSON.parse(data);
-
-        // Kiểm tra kết quả
-        console.log(mang);
-    } catch (parseErr) {
-        console.error('Lỗi khi phân tích JSON:', parseErr);
-    }
-});
 function App() {
   return (
     <div>
-      {/* <TimTro item={danhsachTro}></TimTro> */}
-      <h1>App</h1>
+      <TimTro dST={danhsachTro}></TimTro>
+      
     </div>
   );
 }
